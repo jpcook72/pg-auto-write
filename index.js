@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 const axios = require('axios')
-// const express = require("express")
+const express = require("express")
 
-// const app = express();
-// app.use(express.json());
+const app = express();
+app.use(express.json());
 
 exports.makeDB = async function(db) {
 
