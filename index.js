@@ -1,35 +1,8 @@
 const Sequelize = require('sequelize');
+const axios = require('axios')
 
-const fromGet = {
-    tables: [
-            {    
-                name: 'Food',
-                fields: [
-                    {
-                        name: 'name',
-                        type: 'string'
-                    },
-                    {
-                        name: 'price',
-                        type: 'float'
-                    },
-                ]
-            },
-            {
-                name: 'Drink',
-                fields: [
-                    {
-                        name: 'name',
-                        type: 'string'
-                    },
-                    {
-                        name: 'price',
-                        type: 'float'
-                    },
-                ]
-            }
-            ],
-}
+const resp = axios.get('localhost:3035/api/schema/1')
+const fromGet = resp.data
 
 exports.makeDB = function(db) {
 
