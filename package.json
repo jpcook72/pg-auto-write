@@ -1,6 +1,6 @@
 {
   "name": "pg-auto-write",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Auto-write psql tables using visualization app",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "John Cook <jpcook72@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.0",
     "sequelize": "^6.3.5"
   }
 }
