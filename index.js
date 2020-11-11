@@ -9,6 +9,7 @@ exports.makeDB = async function(db) {
 
     const resp = await axios.get('localhost:3035/api/schema/1')
     const fromGet = resp.data
+    console.log('it is getting', fromGet)
 
     exportTables = {}
 
