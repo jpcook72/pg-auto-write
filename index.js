@@ -5,11 +5,10 @@ const axios = require('axios')
 // const app = express();
 // app.use(express.json());
 
-const resp = await axios.get('localhost:3035/api/schema/1')
-console.log(resp.data)
-const fromGet = resp.data
+exports.makeDB = async function(db) {
 
-exports.makeDB = function(db) {
+    const resp = await axios.get('localhost:3035/api/schema/1')
+    const fromGet = resp.data
 
     exportTables = {}
 
