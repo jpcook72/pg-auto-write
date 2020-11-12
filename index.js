@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 
-const DBsync = async function (dbName, db) {
+const DBsync = async function (dbName) {
 
     const db = new Sequelize(`postgres://localhost:5432/${dbName}`, {
         logging: false,
