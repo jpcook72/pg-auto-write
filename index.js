@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 
-const DBsync = async function (dbName) {
+const DBsync = async function (dbName, db) {
 
     const db = new Sequelize(`postgres://localhost:5432/${dbName}`, {
         logging: false,
@@ -31,9 +31,9 @@ const DBsync = async function (dbName) {
 
     const tables = await makeDB(db);
     await db.sync({force:true})
-    module.exports['db'] = db;
+    exports.db = db;
     Object.keys(tables).forEach( table => {
-        module.exports[table] = tables[table]
+        exports[table] = tables[table]
     })
 }
 
