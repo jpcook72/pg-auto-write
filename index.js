@@ -13,7 +13,7 @@ const DBsync = async function (db) {
     //   });
 
     const makeDB = async function(somedb) {
-        const resp = await axios.get('http://localhost:3035/api/schema/1')
+        const resp = await axios.get('https://pg-visualizer.herokuapp.com/api/schema/1')
         const fromGet = resp.data
     
         exportTables = {}
