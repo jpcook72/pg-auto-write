@@ -37,7 +37,7 @@ const DBsync = async function (dbName) {
     })
 }
 
-exports.makeDB = {makeDB}
+exports.DBsync = DBsync
 
 
 // exports.makeDB = async function(db) {
