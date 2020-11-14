@@ -27,6 +27,16 @@ const DBsync = async function (db) {
             exportTables[table.name] = somedb.define(table.name.toLowerCase(), fieldList)
         })
 
+        fromGet.tables.forEach( (table,ind,arr) => {
+            Object.keys(table.associations).forEach( assoc => {
+                if (table.assocations[assoc]) {
+                    const thisTable = arr.find( inTable => Number(inTable.id) === Number(assoc))
+                    (exportTables[table.name]).belongsTo(exportTables[thisTable.name])
+                    (exportTables[thisTable.name]).hasMany(exportTables[table.name])
+                }
+            })
+        })
+
         return exportTables
     }
 
