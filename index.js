@@ -22,6 +22,7 @@ const DBsync = async function (db) {
             table.fields.forEach( (field) => {
                 fieldList[field.name] = {}
                 fieldList[field.name].type = Sequelize[field.type.toUpperCase()]
+                fieldList[field.name].allowNull = field.allowNull
             })
             exportTables[table.name] = somedb.define(table.name.toLowerCase(), fieldList)
         })
