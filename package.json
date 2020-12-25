@@ -1,6 +1,6 @@
 {
   "name": "pg-auto-write",
-  "version": "2.4.2",
+  "version": "2.4.4",
   "description": "Auto-write psql tables using visualization app",
   "main": "index.js",
   "scripts": {
