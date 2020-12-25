@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const axios = require('axios')
 
-const defineAndAssociateDB = function(userDB, schemaData) {
+const defineAndAssociateDB = function(db, userDB, schemaData) {
     exportTables = {}
     schemaData.tables.forEach( (table) => {
         const fieldList = {}
@@ -40,7 +40,7 @@ const DBsync = async function (db) {
     const makeDB = async function(userDB) {
         const resp = await axios.get('https://pg-visualizer.herokuapp.com/api/schema/1')
         const schemaData = resp.data
-        return defineAndAssociateDB(userDB, schemaData)
+        return defineAndAssociateDB(db, userDB, schemaData)
     }
 
     const tables = await makeDB(db);
