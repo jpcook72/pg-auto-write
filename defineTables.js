@@ -68,4 +68,4 @@ const defineAndAssociateDB = function(userDB, schemaData) {
 //     return exportTables
 // }
 
-module.expors = defineAndAssociateDB
+module.exports = defineAndAssociateDB
