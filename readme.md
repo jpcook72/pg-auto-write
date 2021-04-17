@@ -7,7 +7,7 @@ pg-auto-write returns a database-syncing function that can be used with your 6-d
 
 The datsabase-syncing function returns a promise.
 
-Example function to initialize application that uses pg-auto-write:
+Example code to initialize application that uses pg-auto-write:
 ```
 const express = require("express")
 const {DBsync} = require('pg-auto-write')

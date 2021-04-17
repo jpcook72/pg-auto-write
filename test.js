@@ -2,7 +2,7 @@ const {testTables} = require('./test-constants');
 const defineAndAssociateDB = require('./defineTables');
 const Sequelize = require('sequelize');
 
-testDB = new Sequelize(`postgres://localhost:5432/test-pg-auto-write`, {
+let testDB = new Sequelize(`postgres://localhost:5432/test-pg-auto-write`, {
     logging: false,
 });
 
@@ -70,8 +70,5 @@ describe('defineAndAssociateDB function', () => {
             expect(err.message).toBe('notNull Violation: book.title cannot be null')
 
         })
-
-            //ohhhhh so this thing returs a constructor function of a Book. 
-            //So I probably need to do a definedDB.models.book.create({}), and test on that or something.
     });
 });
