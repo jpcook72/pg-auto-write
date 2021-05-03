@@ -1,6 +1,6 @@
 # PostgreSQL code-generator
 
-[PostgreSQL code-generator](https://github.com/jpcook72/PostgreSQL-code-generator) is a database schema design tool that can be paired with pg-auto-write to auto-generate the PostgreSQL code for modeling the database. Here is a [video example](https://www.youtube.com/watch?v=r2XFSdZUbB4&feature=youtu.be)
+[PostgreSQL code-generator](https://github.com/jpcook72/PostgreSQL-code-generator) is a database schema design tool that can be paired with pg-auto-write to auto-generate the PostgreSQL code for modeling the database. Here is a [video example](https://www.youtube.com/watch?v=r2XFSdZUbB4&feature=youtu.be).
 
 ## Using the app
 
