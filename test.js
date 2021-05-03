@@ -6,11 +6,6 @@ let testDB = new Sequelize(`postgres://localhost:5432/test-pg-auto-write`, {
     logging: false,
 });
 
-//returns the same db
-//creates a table for each of the things
-    //table has the correct row and allowNull functionality
-//tables can be associated properly
-
 describe('defineAndAssociateDB function', () => {
 
     afterAll( async () => {
